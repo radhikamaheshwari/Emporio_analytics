@@ -27,7 +27,7 @@ SDK: Python 2.7, mysql-connector-java-5.1.45
 
 Approach:
 
-1. Connected to the mariadb tables using mysql connector driver and created a dataframe for each tabble. since the dataset is very small, set the parallelism to read as 1 (numPartitions=1).
+1. Connected to the mariadb tables using mysql connector driver and created a dataframe for each table. since the dataset is very small, set the parallelism to read as 1 (numPartitions=1).
 2. Denormalized the data sets based on their relation shown in the problem statement URL and created the four dataframes after joining the related datasets as below:-
   a) DetailedOrders
   b) DetailedCustomers
