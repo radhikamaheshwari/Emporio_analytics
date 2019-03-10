@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06c12507-20b3-4c0a-aa4c-a83edd0df03c" name="Default Changelist" comment="" />
+    <list default="true" id="06c12507-20b3-4c0a-aa4c-a83edd0df03c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/DetailedOrdersDF/._SUCCESS.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/DetailedOrdersDF/.part-00000-3162f885-193e-41ee-9242-55bb43b132e4-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/DetailedOrdersDF/.part-00043-3162f885-193e-41ee-9242-55bb43b132e4-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/DetailedOrdersDF/.part-00051-3162f885-193e-41ee-9242-55bb43b132e4-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/DetailedOrdersDF/.part-00174-3162f885-193e-41ee-9242-55bb43b132e4-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/DetailedOrdersDF/_SUCCESS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/DetailedOrdersDF/part-00000-3162f885-193e-41ee-9242-55bb43b132e4-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/DetailedOrdersDF/part-00043-3162f885-193e-41ee-9242-55bb43b132e4-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/DetailedOrdersDF/part-00051-3162f885-193e-41ee-9242-55bb43b132e4-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/DetailedOrdersDF/part-00174-3162f885-193e-41ee-9242-55bb43b132e4-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/sparkjob.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/sparkjob1.py" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,22 +25,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/py/sparkjob.py">
+        <entry file="file://$PROJECT_DIR$/py/data_processing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="135" column="25" selection-start-line="135" selection-start-column="25" selection-end-line="135" selection-end-column="25" />
+            <state relative-caret-position="371">
+              <caret line="119" column="127" selection-start-line="119" selection-start-column="127" selection-end-line="119" selection-end-column="127" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/py/sparkjob1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -60,13 +65,18 @@
       <find>mysql</find>
       <find>4.8000</find>
       <find>24</find>
+      <find>withColumn</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/py/sparkjob1.py" />
         <option value="$PROJECT_DIR$/py/sparkjob.py" />
+        <option value="$PROJECT_DIR$/py/data_processing.py" />
       </list>
     </option>
   </component>
@@ -80,8 +90,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Emporio_analytics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Emporio_analytics" type="47feb1d3:ProjectViewModuleNode" />
+            </path>
+            <path>
+              <item name="Emporio_analytics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Emporio_analytics" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="Emporio_analytics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Emporio_analytics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Emporio_analytics" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="Emporio_analytics" type="462c0819:PsiDirectoryNode" />
+              <item name="py" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -90,8 +121,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$USER_HOME$/.virtualenvs/Exporio_analytics/lib/python2.7/site-packages/pyspark/jars" />
       <recent name="$PROJECT_DIR$/py" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$USER_HOME$/.virtualenvs/Exporio_analytics/lib/python2.7/site-packages/pyspark/jars" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -106,7 +138,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.sparkjob">
+  <component name="RunManager" selected="Python.data_processing">
+    <configuration name="data_processing" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Emporio_analytics" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/py" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/py/data_processing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="protocol" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Emporio_analytics" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -174,9 +227,11 @@
       <item itemvalue="Python.sparkjob" />
       <item itemvalue="Python.sparkjob1" />
       <item itemvalue="Python.protocol" />
+      <item itemvalue="Python.data_processing" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.data_processing" />
         <item itemvalue="Python.sparkjob" />
         <item itemvalue="Python.protocol" />
         <item itemvalue="Python.sparkjob1" />
@@ -194,6 +249,14 @@
       <option name="presentableId" value="Default" />
       <updated>1552050598486</updated>
     </task>
+    <task id="LOCAL-00001" summary="workspace.xml commit">
+      <created>1552203026886</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1552203026887</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -208,7 +271,7 @@
       <window_info id="Job Explorer" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32922733" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32922733" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39977604" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -224,6 +287,10 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="workspace.xml commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml commit" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/.virtualenvs/Exporio_analytics/lib/python2.7/site-packages/mysql/connector/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -235,13 +302,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py/sparkjob1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/py/DetailedOrdersDF.csv/part-00043-c3fb0b7e-1d5f-42b9-b255-2eb76a965677-c000.csv" />
     <entry file="file://$USER_HOME$/.virtualenvs/Exporio_analytics/lib/python2.7/site-packages/pyspark/sql/readwriter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14640">
@@ -252,25 +313,134 @@
     <entry file="file://$PROJECT_DIR$/py/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/py/DetailedOrdersDF.csv/part-00043-c3fb0b7e-1d5f-42b9-b255-2eb76a965677-c000.csv">
+    <entry file="file://$PROJECT_DIR$/py/DetailedEmployees/part-00162-e6638e75-a37a-4aaf-bd01-4b9343c15a04-c000.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/DetailedOrders/part-00051-428379e6-3ceb-4296-beb5-e8f464f5513b-c000.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/DetailedOrders/part-00000-428379e6-3ceb-4296-beb5-e8f464f5513b-c000.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/DetailedOrders/part-00174-428379e6-3ceb-4296-beb5-e8f464f5513b-c000.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/DetailedCustomers/part-00000-3ea50d7b-b94f-4803-8e76-9527fd2e503b-c000.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/Task-2/part-00046-70943c15-504a-45f4-8a59-5fc36dbf1136-c000.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/Task-2/part-00049-70943c15-504a-45f4-8a59-5fc36dbf1136-c000.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/Task-2/part-00199-70943c15-504a-45f4-8a59-5fc36dbf1136-c000.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/Task-3/part-00181-87e97cd0-4bcc-48f4-ad82-c586a7cf8fc6-c000.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/Task-3/part-00193-87e97cd0-4bcc-48f4-ad82-c586a7cf8fc6-c000.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/Task-3/part-00183-87e97cd0-4bcc-48f4-ad82-c586a7cf8fc6-c000.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_processing.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/Task-3/part-00001-b7c3ecc8-02c4-4ff4-8122-7d6b60d7f595-c000.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/Task-3/part-00002-b7c3ecc8-02c4-4ff4-8122-7d6b60d7f595-c000.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/Task-2/part-00001-392044e5-a036-455c-963c-c9ef9790b4e6-c000.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/Task-3/part-00000-b7c3ecc8-02c4-4ff4-8122-7d6b60d7f595-c000.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/Task-2/part-00000-392044e5-a036-455c-963c-c9ef9790b4e6-c000.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="1598">
-          <caret line="622" column="23" lean-forward="true" selection-start-line="622" selection-start-column="23" selection-end-line="622" selection-end-column="23" />
-        </state>
+        <state relative-caret-position="-3671" />
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="95" lean-forward="true" selection-start-line="23" selection-start-column="95" selection-end-line="23" selection-end-column="95" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/sparkjob1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/py/Task-3/part-00000-672d3e68-3a90-4dab-ba0b-b08bd8d5435d-c000.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/py/sparkjob.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="135" column="25" selection-start-line="135" selection-start-column="25" selection-end-line="135" selection-end-column="25" />
+        <state relative-caret-position="160">
+          <caret line="151" column="16" selection-end-line="172" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/data_processing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="119" column="127" selection-start-line="119" selection-start-column="127" selection-end-line="119" selection-end-column="127" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
