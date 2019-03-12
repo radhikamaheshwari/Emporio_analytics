@@ -122,11 +122,11 @@ def main():
 
     #Task-2 : Calculated Month from order date and doing a sum(total_paid_price), group by CustomerID,month
 
-    sqlContext.sql('select CustomerID,month(OrderDate) as month,sum(total_paid_price) from DetailedOrders group by CustomerID,month').repartition(2).write.csv("Task-2")
+    sqlContext.sql('select CustomerID,month(OrderDate) as month,sum(total_paid_price) from DetailedOrders group by CustomerID,month').coalesce(2).write.csv("Task-2")
 
     #Task-3 : Counting distinct CustomerIDs from the DetailedOrders where total_price_paid by customer for that product is > 50
 
-    sqlContext.sql('select ProductID,count(distinct CustomerID) from DetailedOrders where total_paid_price>=50 group by ProductID').repartition(1).write.csv("Task-3")
+    sqlContext.sql('select ProductID,count(distinct CustomerID) from DetailedOrders where total_paid_price>=50 group by ProductID').coalesce(2).write.csv("Task-3")
 
     DetailedOrdersDF.write.csv("Task-1/DetailedOrders")
     DetailedCustomersDF.write.csv("Task-1/DetailedCustomers")
