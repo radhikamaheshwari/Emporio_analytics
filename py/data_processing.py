@@ -63,6 +63,10 @@ def main():
     TerritoriesDF = sqlContext.read.format("jdbc").options(
         **properties).options(dbtable="Territories"
     ).load()
+    
+    RegionDF = sqlContext.read.format("jdbc").options(
+        **properties).options(dbtable="Region"
+    ).load()
 
 
 # ************* Will be joining the Datasets below to create a Denormalized Dataset --- Products**************
@@ -81,33 +85,36 @@ def main():
 
 # ************* Denormalizing the datasets ************
 
-    DetailedOrdersDF = OrderDetailsDF.join(OrdersDF,
+    DetailedOrdersDF = OrdersDF.join(OrderDetailsDF,
                                          (OrderDetailsDF.OrderID == OrdersDF.OrderID),
-                                         'inner').drop(OrdersDF.OrderID
+                                         'left').drop(OrderDetailsDF.OrderID
                                          ).join(ShippersDF,
                                                 (OrdersDF.ShipVia == ShippersDF.ShipperID),
-                                                'inner').drop(OrdersDF.ShipVia)
+                                                'right').drop(OrdersDF.ShipVia)
 
     DetailedCustomersDF = CustomersDF.join(CustomerCustomerDemoDF,
                                            (CustomersDF.CustomerID == CustomerCustomerDemoDF.CustomerID),
-                                           'inner').drop(CustomerCustomerDemoDF.CustomerID
+                                           'left').drop(CustomerCustomerDemoDF.CustomerID
                                         ).join(CustomerDemographicsDF,
                                                 (CustomerCustomerDemoDF.CustomerTypeID == CustomerDemographicsDF.CustomerTypeID),
-                                               'inner').drop(CustomerDemographicsDF.CustomerTypeID)
+                      
+                         'right').drop(CustomerCustomerDemoDF.CustomerTypeID)
 
     DetailedEmployeesDF = EmployeesDF.join(EmployeeTerritoriesDF,
                                            (EmployeesDF.EmployeeID == EmployeeTerritoriesDF.EmployeeID),
-                                           'inner').drop(EmployeeTerritoriesDF.EmployeeID
+                                           'left').drop(EmployeeTerritoriesDF.EmployeeID
                                         ).join(TerritoriesDF,
                                                 (EmployeeTerritoriesDF.TerritoryID == TerritoriesDF.TerritoryID),
-                                            'inner').drop(TerritoriesDF.TerritoryID)
+                                            'right').drop(EmployeeTerritoriesDF.TerritoryID)
+                                         .join(RegionDF,TerritoriesDF.RegionID==RegionDF.RegionID,'right')
+                                         .drop(TerritoriesDF.RegionID)
 
-    DetailedProductsDF = ProductsDF.join(SuppliersDF,
+    DetailedProductsDF = SuppliersDF.join(ProductsDF,
                                          (ProductsDF.SupplierID == SuppliersDF.SupplierID),
-                                         'inner').drop(SuppliersDF.SupplierID
+                                         'left').drop(ProductsDF.SupplierID
                                         ).join(CategoriesDF,
                                                 (ProductsDF.CategoryID == CategoriesDF.CategoryID),
-                                            'inner').drop(CategoriesDF.CategoryID)
+                                            'right').drop(ProductsDF.CategoryID)
 
     #Adding another column "total_paid_price" in DetailedOrdersDF with formula: total_paid_price = UnitPrice * Quantity - Discount
     DetailedOrdersDF_tpp=DetailedOrdersDF.withColumn("total_paid_price",(DetailedOrdersDF['UnitPrice'].cast('double')*DetailedOrdersDF['Quantity'])-DetailedOrdersDF['Discount'])
